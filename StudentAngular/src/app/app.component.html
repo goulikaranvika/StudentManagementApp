@@ -1,0 +1,14 @@
+
+
+
+<nav class="navbar" *ngIf="authService.currentUser()">
+  <div class="logo">StudentApp</div>
+  <div class="user-info">
+    <span>Welcome, {{ authService.currentUser() }}</span>
+    <button (click)="logout()">Logout</button>
+  </div>
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
